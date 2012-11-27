@@ -5,7 +5,7 @@ COMPRESS_REVISION_NUMBER = '1.0'
 
 
 #Blog Integration: Tumblr
-TUMBLR_BLOG_URL = 'riousdelie.tumblr.com'
+TUMBLR_BLOG_URL = 'siriusdely.tumblr.com'
 TUMBLR_API_URL = 'http://api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
 TUMBLR_API_KEY = 'xAiWh2QJBQq0PYm0G9KKPHqQXkMwuNLFzP67yU1oc341h3kY6g'
 
