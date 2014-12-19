@@ -110,7 +110,7 @@ TENT_FEED_URL = '[ENTER A URL TO YOUR FEED] ex. https://yourname.tent.is'
 
 
 if DEPLOYMENT_MODE == 'dev':
-    SITE_ROOT_URI = 'http://127.0.0.1:8000/'
+    SITE_ROOT_URI = 'http://localhost:8000/'
     DEBUG = True
 else:
     DEBUG = False
