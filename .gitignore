@@ -53,6 +53,13 @@ docs/_build/
 # PyBuilder
 target/
 
+venv
+*.pyc
+staticfiles
+
 .DS_Store
+.idea
 personal_syte_settings.py
+.elasticbeanstalk/
+.vagrant/
 .env

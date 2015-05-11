@@ -1,6 +1,6 @@
 //Profiles
 .profile {
-  background: #E9E9E9 url('/static/imgs/b.png');
+  background: #E9E9E9;
 }
 
 .profile-info {
@@ -58,6 +58,10 @@
 
   h2 a:hover, h3 a:hover
   { color: @adjacent-color; }
+}
+
+#flickr-profile .profile-name {
+  margin-left: 0;
 }
 
 .profile-description {
@@ -396,7 +400,6 @@
 .track-image {
   border-bottom: 0;
   position: relative;
-  padding-left: 45px;
 
   img {
     position: absolute;
@@ -419,8 +422,8 @@
   line-height: 18px;
   margin-left: 45px;
 
-  a { 
-    border-bottom: 0; 
+  a {
+    border-bottom: 0;
     font-weight: 500;
   }
 }
@@ -457,6 +460,14 @@
     height: 32px;
   }
 
+  strong {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 250px;
+    overflow: hidden;
+    display: inline-block;
+  }
+
   span {
     color: #777;
     font-size: 13px;
@@ -486,4 +497,176 @@
   margin-left: 45px;
   color: #999;
 }
+
+//Steam profile
+.profile-games {
+  list-style: none;
+  margin: 0;
+  background: #fff;
+
+  li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #C2C2C2;
+    min-height: 80px;
+  }
+
+  strong {
+	  margin-left: 155px;
+  }
+}
+
+.profile-game-title {
+  border-bottom: 0;
+  position: relative;
+  padding-left: 45px;
+
+  img {
+  	display: block;
+  	position: absolute;
+  	margin: 5px 15px 5px 0px;
+  	left: 0;
+  	top: 0;
+  	width: 184px;
+    height: 69px;
+    border: 2px solid @adjacent-color;
+  }
+
+  span {
+    color: #777;
+    font-size: 13px;
+    padding-left: 3px;
+  }
+}
+
+.profile-game-title:hover {
+  border-bottom: 0;
+}
+
+.profile-game-text {
+  color: #777;
+  margin:0;
+  padding: 3px 0;
+  font-size: 13px;
+  line-height: 18px;
+  margin-left: 200px;
+
+  a { border-bottom: 0; }
+}
+
+//StackOverflow profile
+.profile-stackoverflow {
+  list-style: none;
+  margin: 0;
+  background: #fff;
+
+  li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #C2C2C2;
+  }
+}
+
+.profile-stackoverflow-name {
+  border-bottom: 0;
+  font-weight: 500;
+}
+.profile-stackoverflow-name:hover {
+  border-bottom: 0;
+}
+
+.profile-stackoverflow-description {
+  margin:0;
+  padding: 5px 0;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.profile-stackoverflow-details {
+  color: #777;
+  list-style: none;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+
+  li {
+    padding: 0;
+    border: 0;
+    display: inline-block;
+
+    //ie7 inline-block hack
+    zoom: 1;
+    *display: inline;
+  }
+
+  a {
+    border-bottom: 0;
+  }
+
+  a:hover {
+    border-bottom: 0;
+    color: @adjacent-color;
+  }
+}
+
+//LinkedIn Profile
+.linkedin-details {
+  margin: 0;
+  background: #fff;
+
+  p {
+    margin: 0 0 10px 0;
+    line-height: 22px;
+  }
+
+  p.linkedin-dates {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 5px;
+  }
+}
+
+.linkedin-sec {
+  border-top: 1px solid #C2C2C2;
+  padding: 10px;
+
+  .linkedin-title {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  ul.linkedin-experience , ul.linkedin-education {
+    list-style: none;
+    margin: 15px;
+
+    li { margin-bottom: 20px; }
+  }
+}
+
+.linkedin-sec.linkedin-summary {
+  border-top: 0;
+  p { padding: 15px; }
+}
+
+.linkedin-skills {
+  list-style: none;
+  margin: 15px;
+
+  li { 
+    display: inline-block;
+    
+    //ie7 inline-block hack
+    zoom: 1;
+    *display: inline;
+    background: #E9E9E9;
+    border: 1px solid #C2C2C2;
+    padding: 3px 10px;
+    margin: 0 5px 5px 0;
+    font-size: 14px;
+  }
+}
+
+.linkedin-groups {
+  margin: 15px 15px 15px 30px;
+}
+
+
 
