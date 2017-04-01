@@ -1,6 +1,15 @@
+
+### :warning: Unmaintained
+
+Sorry, but this project is no longer maintained. Please use the new version, called [Syte2](https://github.com/rigoneri/Syte2).
+
+PS. The project as of June 2016 still works fine if you want to use it.
+
+---
+
 # Syte
 
-Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Wordpress, Linkedin, Spotify/Last.fm, SoundCloud, Bitbucket, StackOverflow, Flickr and Steam. You can see it in action on [my personal site](http://rigoneri.com).
+Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Wordpress, Linkedin, Spotify/Last.fm, SoundCloud, Bitbucket, StackOverflow, Flickr and Steam. You can see it in action on [my personal site](http://rigoneri.herokuapp.com).
 
 ## Social Integrations
 
@@ -225,9 +234,13 @@ If you want to turn off GitHub integration just set `GITHUB_INTEGRATION_ENABLED`
 
 ### Setting up Dribbble integration
 
-You don't have to do anything to setup the Dribbble integration. If you want to turn off this feature just set `DRIBBBLE_INTEGRATION_ENABLED` setting to False in syte_settings.py.
+To get started go to <http://developer.dribbble.com/> and click on **Register a New Application**.
 
+Enter ***Name***, ***Description***, ***Website URL*** and ***Callback URL***. After that is done Dribbble will give you a **Client Access Token** to use.
 
+Once you have your access token from Dribbble you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter it under `DRIBBBLE_ACCESS_TOKEN`
+
+If you want to turn off this feature just set `DRIBBBLE_INTEGRATION_ENABLED` setting to False in syte_settings.py.
 
 
 ### Setting up Instagram integration
@@ -449,7 +462,7 @@ First signup to [AWS](http://aws.amazon.com) then follow the instructions below.
 5. Execute the `eb start` command to deploy a sample application to AWS.  Once this command completes execute `eb status --verbose` and confirm that the sample application is running at the provided url.
 6. Let's make sure our configurations are right.
    - First, open ./ebextensions/syte.config and confirm the settings here.  You should not have to update anything.
-   - Second, open the ./elasticbeanstalk/opensettings.XXX-env (where XXX-env is the name of your environment).  Update this by updating: 
+   - Second, open the ./elasticbeanstalk/opensettings.XXX-env (where XXX-env is the name of your environment).  Update this by updating:
      DJANGO_SETTINGS_MODULE=syte.settings
      StaticFiles=syte/static=
      WSGIPath=syte/wsgi.py

@@ -46,7 +46,8 @@ STACKOVERFLOW_API_URL = 'http://api.stackoverflow.com/1.1/'
 
 #Dribbble Integration
 DRIBBBLE_INTEGRATION_ENABLED = False
-DRIBBBLE_API_URL = 'http://api.dribbble.com/players/'
+DRIBBBLE_API_URL = 'https://api.dribbble.com/v1/'
+DRIBBBLE_ACCESS_TOKEN = '[ENTER DRIBBBLE ACCESS TOKEN HERE, SEE DRIBBBLE SETUP INSTRUCTIONS]'
 
 
 #Instagram Integration
