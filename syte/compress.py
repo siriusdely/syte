@@ -33,7 +33,7 @@ def compress_styles():
     css_path = os.path.join(PATH_TO_HERE, 'static/css/')
 
     try:
-        subprocess.check_call(shlex.split('lessc {0} {1}styles-{2}.min.css -yui-compress'
+        subprocess.check_call(shlex.split('lessc {0} {1}styles-{2}.min.css'
             .format(less_path, css_path, settings.COMPRESS_REVISION_NUMBER)))
         print 'CSS Styles Generated: styles-{0}.min.css'.format(settings.COMPRESS_REVISION_NUMBER)
     except Exception:

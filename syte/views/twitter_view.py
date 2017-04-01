@@ -4,6 +4,8 @@ import twitter
 
 from django.http import HttpResponse
 from django.conf import settings
+# import logging
+# logger = logging.getLogger('django')
 
 def twitter_view(request, username):
     api = twitter.Api(consumer_key=settings.TWITTER_CONSUMER_KEY,
@@ -17,6 +19,8 @@ def twitter_view(request, username):
     statuses_in_dict = []
     for s in statuses:
         statuses_in_dict.append(json.loads(s.AsJsonString()))
+
+    # logger.debug(statuses_in_dict)
 
     return HttpResponse(content=json.dumps(statuses_in_dict),
                         status=200,
