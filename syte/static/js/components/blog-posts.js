@@ -71,10 +71,10 @@ function renderBlogPosts(posts) {
 }
 
 function fetchTumblrBlogPosts(offset, tag) {
-  var blog_fetch_url = '/blog.json?o=' + offset;
+  var blog_fetch_url = './blog.json?o=' + offset;
 
   if (tag)
-      blog_fetch_url = '/tags/' + tag + '/?o=' + offset;
+      blog_fetch_url = './tags/' + tag + '/?o=' + offset;
 
   $.getJSON(blog_fetch_url, function(blog_posts) {
     renderBlogPosts(blog_posts.response.posts);
