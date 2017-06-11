@@ -3,6 +3,7 @@
 python manage.py collectstatic --noinput  # Collect static files
 
 # Prepare log files and start outputting logs to stdout
+mkdir ./logs
 touch ./logs/gunicorn.log
 touch ./logs/access.log
 tail -n 0 -f ./logs/*.log &
